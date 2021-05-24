@@ -7,12 +7,10 @@
           "description": "Finnish Meteorological Institute"
         },
         {
-          // Tarvitaanko tätä?
           "name": "MET",
           "description": "Meteorological services"
         },
         {
-          // Ollaanko ANSP?
           "name": "ANSP",
           "description": "Air Navigation Service Provider"
         }
@@ -39,7 +37,6 @@
           "email": "ilmailu@fmi.fi",
           "phoneNumber": ""
         },
-        // Tarvitaanko kahteen kertaan?
         {
           "name": "service support",
           "description": "For any issues related to the operation of Winter Weather Precipitation type service ",
@@ -52,7 +49,6 @@
   "serviceCategorisation": {
     "serviceType": "SWIM_COMPLIANT",
     "lifeCycleStage": "OPERATIONAL",
-    // Onko allaoleva oikea?
     "businessActivityType": ["AERODROME_OPERATION"],
     "intendedConsumer": [
       "CIVIL_AIRSPACE_USER",
@@ -67,7 +63,7 @@
       "NETWORK_MANAGER",
       "AIRPORT_OPERATOR",
       "AIRSIDE_GROUND_HANDLER",
-      "MILITARY_DEFENCE_CENTRE "
+      "MILITARY_DEFENCE_CENTRE"
     ],
     "informationCategory": [
       "METEOROLOGICAL_INFORMATION_EXCHANGE",
@@ -110,19 +106,12 @@
       {
         "name": "Operational context",
         "description": "Precipitation type service fills the need to retrieve information about weather phenomena for flight planning and total airport management. No IER was used "
-      },
-      // Tästä ei ole tietoa, voi varmaan jättää pois?
-      {
-        "name": "Information Exhange Requirements",
-        "description": "VAATIIKO TIEDONVAIHTO JOTAIN IER:ÄÄ?"
       }
     ],
-    // Tämä kai kuvaa sitä mitä tapahtuu kun jaetaan säädataa? Voinee jättää tyhjäksi?
     "functionality": [
       {
         "name": "Download Winter Weather Precipitation Type over an area",
-        "description": "Allow the service consumer to retrieve precipitation type ensemble forecast information in the European domaine in GRIB2 format",
-        "realWorldEffect": ""
+        "description": "Allow the service consumer to retrieve precipitation type ensemble forecast information in the European domaine in GRIB2 format"
       }
     ],
     "accessAndUseCondition": [
@@ -176,9 +165,7 @@
       {
         "name": "Service Information Definition",
         "description": "The interface for the service is provided as a GRIB download service via HTTP and it is described fully in Github: https://github.com/fmidev/smartmet-plugin-download/wiki/SmartMet-plugin-download",
-        // Mikä tämä on?
-        "airmConformant": true,
-        "airmVersion": "1.0.0"
+        "airmConformant": false
       }
     ]
   },
@@ -214,11 +201,7 @@
         {
           "name": "Precipitation Type Ensemble Forecast over an area",
           "description": "TÄHÄN KUVAUS MITÄ TUOTEEN TILAUKSESSA TAPAHTUU JA KUVAUS MIKÄ ON KYSELYN VASTAUS",
-          // Tämä on Optional, voisi ehkä jättää pois?
-          "idempotency": "IDEMPOTENT",
           "synchronicity": "SYNCHRONOUS",
-          // Tämä on Optional, voisi ehkä jättää pois?
-          "precondition": "No preconditions identified",
           "tiProtocolMethod": ["HTTP GET"],
           "processingConsideration": [
             {
