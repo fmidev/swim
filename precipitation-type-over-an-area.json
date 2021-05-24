@@ -200,7 +200,7 @@
       "operation": [
         {
           "name": "Precipitation Type Ensemble Forecast over an area",
-          "description": "TÄHÄN KUVAUS MITÄ TUOTEEN TILAUKSESSA TAPAHTUU JA KUVAUS MIKÄ ON KYSELYN VASTAUS",
+          "description": "The interface for the service is provided as a GRIB download service via HTTP. Message exchange pattern is request-response type. Typically the user makes a request to the server and in response gets a GRIB file.",
           "synchronicity": "SYNCHRONOUS",
           "tiProtocolMethod": ["HTTP GET"],
           "processingConsideration": [
