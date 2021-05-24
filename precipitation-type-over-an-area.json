@@ -1,345 +1,251 @@
 {
-	"informationService":
-	{ 
-        "descriptionInformation" : 
+  "informationService": {
+    "descriptionInformation": {
+      "abbreviations": [
         {
-            "abbreviations":
-            [
-                {
-                    "name": "FMI",
-                    "description": "Finnish Meteorological Institute"
-                },
-                {
-                    "name": "MET",
-                    "description": "Meteorological services"
-                },
-                {
-                    "name": "ANSP",
-                    "description": "Air Navigation Service Provider"
-                }
-            ],
-            "serviceDescriptionIdentification":
-            {
-                "serviceDescriptionTitle": "Winter Weather Precipitation Type over an area",
-                "serviceDescriptionEdition": "1.0",
-                "serviceDescriptionReferenceDate": "2021-06-15"
-            }
+          "name": "FMI",
+          "description": "Finnish Meteorological Institute"
         },
-        "name": "Winter Weather Precipitation Type over an area",
-        "version": "1.0.0",
-        "serviceAbstract": "Winter Weather Precipitation type over an area -service is an ensemble forecast for precipitation type over the Europe area at the surface level. It is post-processed information from ECMWF input data and it is intended to air traffic planner, airport maintenance, air traffic control, airlines and pilots to help and prepare for Winter weather conditions. Ensemble forecast has 6 classes for precipitation: snow (solid), sleet (solid and liquid), rain (liquid), drizzle (liquid, small droplets), freezing drizzle  (liquid, small drops, below freezing point) and  freezing rain (liquid, below freezing point). The probability of precipitation is expressed as a percentage. Presipitation types can be called all at once or in desired groups or individually.",
-        "serviceProvision":
         {
-            "provider": "Finnish Meteorological Institute, FMI",
-            "providerDescription": "FMI is the designated aeronautical meteorological service provider for Helsinki FIR as designated by the Ministry of Transport and Communications of Finland and as certified by Finnish Transport and Communications Agency.",
-            "providerType": "REGULATED_METEOROLOGICAL_SERVICE_PROVIDER",
-            "dateInOperation": "2021-09-01",
-            "serviceSupport": "For Incidents on services in operation, contact the Service desk [24/7]: +358 29 539 2580 or e-mail: operposti@fmi.fi",
-            "pointOfContact": 
-            [
-                {
-                    "name": "Custome Services Aviation and Military",
-                    "description": "to request access to the service, send an e-mail to ilmailu@fmi.fi",
-                    "email": "ilmailu@fmi.fi",
-                    "phoneNumber": ""
-                },
-                {
-                    "name": "service support",
-                    "description": "For any issues related to the operation of Winter Weather Precipitation type service ",
-                    "email": "ilmailu@fmi.fi",
-                    "phoneNumber": ""
-                }
-            ]
-        }
-    },
-    "serviceCategorisation": 
-    {
-        "serviceType": "SWIM_COMPLIANT",
-        "lifeCycleStage": "OPERATIONAL",
-        "businessActivityType": 
-        [
-            "AERODROME_OPERATION"
-        ],
-        "intendedConsumer": 
-        [
-            "CIVIL_AIRSPACE_USER",
-            "MILITARY_AIRSPACE_USER",
-            "CIVIL_AIR_NAVIGATION_SERVICE_PROVIDER",
-            "MILITARY_AIR_NAVIGATION_SERVICE_PROVIDER",
-            "AIR_TRAFFIC_SERVICE_PROVIDER",
-            "REGULATED_METEOROLOGICAL_SERVICE_PROVIDER",
-            "AERONAUTICAL_INFORMATION_SERVICE_PROVIDER",
-            "COMMUNICATION_NAVIGATION_AND_SURVEILLANCE_SERVICE_PROVIDER",
-            "PROVIDER_OF_DATA_SERVICES",
-            "NETWORK_MANAGER",
-            "AIRPORT_OPERATOR",
-            "AIRSIDE_GROUND_HANDLER",
-            "MILITARY_DEFENCE_CENTRE "
-        ],
-        "informationCategory": 
-        [
-            "METEOROLOGICAL_INFORMATION_EXCHANGE",
-            "COOPERATIVE_NETWORK_INFORMATION_EXCHANGE",
-            "FLIGHT_INFORMATION_EXCHANGE "
-        ],
-        "applicationMessageExchangePattern": 
-        [
-            "REQUEST_REPLY"
-        ],
-        "geospatialCategorisation": 
+          // Tarvitaanko tätä?
+          "name": "MET",
+          "description": "Meteorological services"
+        },
         {
-            "description": "The product covers the area between 22.00° N to 70.00° N and 25.00° W to 45.00° E, with a horizontal resolution 16 km x 16 km. This includes Europe and Part of North Atlantic and northern Africa."
+          // Ollaanko ANSP?
+          "name": "ANSP",
+          "description": "Air Navigation Service Provider"
         }
+      ],
+      "serviceDescriptionIdentification": {
+        "serviceDescriptionTitle": "Winter Weather Precipitation Type over an area",
+        "serviceDescriptionEdition": "1.0",
+        "serviceDescriptionReferenceDate": "2021-06-15"
+      }
     },
-    "serviceDescripitionReferences":
-    {
-        "implementedStandard":
-        [
-            {
-                "standardType": "SERVICE_STANDARD",
-                "isConformant": false
-            }
-        ]
-    },
-    "serviceGeneralDescription": 
-    {
-        "operationalNeed": 
-        [
-            {
-                "name": "Operational context",
-                "description": "Precipitation type service fills the need to retrieve information about weather phenomena for flight planning and total airport management. No IER was used "
-            },
-            {
-                "name": "Information Exhange Reguiments",
-                "description": "VAATIIKO TIEDONVAIHTO JOTAIN IER:ÄÄ?"
-            }
-        ],
-        "functionality": 
-        [
-            {
-                "name": "Download Winter Weather Presipitation Type over an area",
-                "description": "Allow the service consumer to retrieve presipitation type ensemble forecast information in the European domaine in GRIB2 format",
-                "realWorldEffect": ""
-            }
-        ],
-        "accessAndUseCondition": 
-        [
-            {
-                "type": "SECURITY_CONSTRAINT",
-                "name": "Use the apikey",
-                "description": "The access to the service is based on the apikey in request comand"
-            },
-            {
-                "type": "SECURITY_CONSTRAINT",
-                "name": "SLA",
-                "description": "The access to the service is subject to the signature of a Service Level Agreement with FMI"
-            }
-        ],
-        "qualityOfService": 
-        [
-            {
-                "name": "Availability for point forecast",
-                "description": "99.99 % outside the planned outages"
-            },
-            {
-                "name": "Capacity for point forecast",
-                "description": "17 000 service requests per minute"
-            },            
-            {
-                "name": "Response time for point forecast",                                                                  
-                "description": "1 sec per parameter"
-            },
-            {
-                "name": "Availability maximum area (European domine)",
-                "description": "99.99 % outside the planned outages"
-            },
-            {
-                "name": "Capacity for maximum area (European domine)",
-                "description": "625 service requests per hour"
-            },
-            {
-                "name": "Response time for maximum area (European domine)",
-                "description": "1 minute per parameter"
-            }           
-        ],
-        "validation": 
-        [
-            {
-                "type": "ISO9001:2015",
-                "description": "The service producton is according to ISO9001:2015."
-            }
-        ]
-    },
-    "serviceInformationDescription": 
-    {
-        "informationDefinition": 
-        [
-            {
-                "name": "Service Information Definition",
-                "description": "The interface for the service is provided as a GRIB download service via HTTP and it is described fully in Github: https://github.com/fmidev/smartmet-plugin-download/wiki/SmartMet-plugin-download",
-                "airmConformant": true,
-                "airmVersion": "1.0.0"
-            }
-        ]
-    },
-    "serviceTechnicalDescription": 
-    {
-        "securityMechanism": 
-        [
-            {
-                "name": "TLSv 1.2",
-                "description": "The service relies on TLSv 1.2 to provide integrity and confidentiality.",
-                "type": 
-                [
-                    "AUTHENTICATION",
-                    "CONFIDENTIALITY",
-                    "INTEGRITY"
-                ]
-            }      
-        ],
-        "serviceMonitoring": 
+    "name": "Winter Weather Precipitation Type over an area",
+    "version": "1.0.0",
+    "serviceAbstract": "Winter Weather Precipitation type over an area -service is an ensemble forecast for precipitation type over the Europe area at the surface level. It is post-processed information from ECMWF input data and it is intended to air traffic planner, airport maintenance, air traffic control, airlines and pilots to help and prepare for Winter weather conditions. Ensemble forecast has 6 classes for precipitation: snow (solid), sleet (solid and liquid), rain (liquid), drizzle (liquid, small droplets), freezing drizzle  (liquid, small drops, below freezing point) and  freezing rain (liquid, below freezing point). The probability of precipitation is expressed as a percentage. Precipitation types can be called all at once or in desired groups or individually.",
+    "serviceProvision": {
+      "provider": "Finnish Meteorological Institute, FMI",
+      "providerDescription": "FMI is the designated aeronautical meteorological service provider for Helsinki FIR as designated by the Ministry of Transport and Communications of Finland and as certified by Finnish Transport and Communications Agency.",
+      "providerType": "REGULATED_METEOROLOGICAL_SERVICE_PROVIDER",
+      "dateInOperation": "2021-09-01",
+      "serviceSupport": "For Incidents on services in operation, contact the Service desk [24/7]: +358 29 539 2580 or e-mail: operposti@fmi.fi",
+      "pointOfContact": [
         {
-            "monitoringDescription": "The service is monitored, however there is no monitoring interface provided to the consumers"
-        }
-    },
-    "serviceInterface": 
-    [
+          "name": "access request",
+          "description": "to request access to the service, send an e-mail to ilmailu@fmi.fi",
+          "email": "ilmailu@fmi.fi",
+          "phoneNumber": ""
+        },
+        // Tarvitaanko kahteen kertaan?
         {
-            "name": "WinterWeather Presipition Type over an area interface",
-            "description": "The interface for the service is provided as a GRIB2 download service via HTTP and it is described fully in Github: https://github.com/fmidev/smartmet-plugin-download/wiki/SmartMet-plugin-download",
-            "interfaceProvisionSide": "PROVIDER_SIDE_INTERFACE",
-            "tiPrimitiveMessageExchangePattern": "SYNCHRONOUS_REQUEST_RESPONSE",
-            "serviceInterfaceBinding": "SWIM_TI_YP_1_0_WS-N_SOAP",
-            "networkInterfaceBinding": "IPV4_UNICAST",
-            "interfaceBindingDescription": "The interface for the service is provided as a GRIB download service via HTTP. Message exchange pattern is request-response type. Typically the user makes a request to the server and in response gets a GRIB file.",
-            "endPoint": 
-            [
-                {
-                    "name": "Production Service Endpoint",
-                    "description": "The service is available for consumption for operational usage at this endpoint. Note that the user must set the apikey into the url command at place /APEKEY/",
-                    "address": "https://data.fmi.fi/fmi-apikey/APIKEY/download?producer=wwi&timestep=data&param=ProbabilityOfPrecFormDrizzle,ProbabilityOfPrecFormRain,ProbabilityOfPrecFormSleet,ProbabilityOfPrecFormSnow,ProbabilityOfPrecFormFreezingDrizzle,ProbabilityOfPrecFormFreezingRain&format=GRIB2"
-                }
-            ],
-            "operation": 
-            [
-                {
-                    "name": "Presipitation Type Ensemble Forecast over an area",
-                    "description": "TÄHÄN KUVAUS MITÄ TUOTEEN TILAUKSESSA TAPAHTUU JA KUVAUS MIKÄ ON KYSELYN VASTAUS",
-                    "idempotency": "IDEMPOTENT",
-                    "synchronicity": "ASYNCHRONOUS",
-                    "precondition": "No preconditions identified",
-                    "tiProtocolMethod": 
-                    [
-                        "HTTP GET"
-                    ],
-                    "processingConsideration": 
-                    [
-                        {
-                            "name": "Historic time values constraint",
-                            "description": "The operation does not accept time values in the past"
-                        }
-                    ],
-                    "operationMessage": 
-                    [
-                        {
-                            "direction": "IN",
-                            "name": "presipitationTypeForecastToAPointRequest",
-                            "description": "Message which provides the presipitation type forecast for a single point i.e. single airport.",
-                            "isFault": false,
-                            "headers": "ONKO TÄSSÄ OLTAVA JOTAIN?",
-                            "body": ""
-                        },
-                        {
-                            "direction": "OUT",
-                            "name": "presipitationTypeForecastToAPointResponse",
-                            "description": "Message which responds the validity of a previously sent TOBTSettingRequest message",
-                            "isFault": false,
-                            "headers": "application/XML",
-                            "body": "none"
-                        }
-                    ]
-                },
-                {
-                    "name": "deleteTOBT",
-                    "description": "The deleteTOBT Service Operation receives a request for deleting the Target Off-Block Time for a specific flight. The operation returns a confirmation of the validity of such request taking into account this business rule: Not accepting request affecting a flight with no Target Off-Block Time set yet.",
-                    "idempotency": "IDEMPOTENT",
-                    "synchronicity": "SYNCHRONOUS",
-                    "precondition": "",
-                    "tiProtocolMethod": 
-                    [
-                        "HTTP POST"
-                    ],
-                    "operationMessage": 
-                    [
-                        {
-                            "direction": "IN",
-                            "name": "TOBTDeleteRequest",
-                            "description": "Message which requests deleting the last TOBT value of the specified flight.",
-                            "isFault": false,
-                            "headers": "",
-                            "body": ""
-                        },
-                        {
-                            "direction": "OUT",
-                            "name": "TOBTDeleteResponse",
-                            "description": "Message which responds the validity of a previously sent TOBTDeleteRequest message",
-                            "isFault": false,
-                            "headers": "",
-                            "body": ""
-                        }
-                    ]
-                }
-            ],
-            "behaviour": 
-            [
-                {
-                    "name": "nominal behaviour",
-                    "description": "Each operation of the interface can be called independently.\r\nThe following diagram illustrates the interaction between the service consumer and the service"
-                }
-            ]
+          "name": "service support",
+          "description": "For any issues related to the operation of Winter Weather Precipitation type service ",
+          "email": "ilmailu@fmi.fi",
+          "phoneNumber": ""
         }
-    ],
-    "serviceDescriptionReferences": 
-    {
-        "implementedStandard": 
-        [
-            {
-                "standardType": "SERVICE_STANDARD",
-                "isConformant": false
-            }
-        ],
-        "serviceDocument": 
-        [
-            {
-                "documentType": "INFORMATION_DEFINITION",
-                "title": "TOBT Setting Information Definition",
-                "version": "1.0",
-                "description": "Information Definition for the DONLON TOBT Setting service. Includes Semantic correspondence with traces to the AIRM",
-                "reference": "public:/2019-09/TraceToAIRM.txt"
-            },
-            {
-                "documentType": "MACHINE_READABLE_SERVICE_DESCRIPTION",
-                "title": "TOBT Setting Schema",
-                "version": "1.0",
-                "description": "JSON Schema describing the structure of information",
-                "reference": "public:/2019-09/TOBTSetting_JSON.txt"
-            },
-            {
-                "documentType": "MACHINE_READABLE_SERVICE_DESCRIPTION",
-                "title": "Interface WSDL",
-                "version": "1.0",
-                "description": "Machine processable description of the service interface",
-                "reference": "public:/2019-09/TOBT_Interface.wsdl"
-            },
-            {
-                "documentType": "CODE_EXAMPLE",
-                "title": "Example of messages",
-                "description": "A set of message examples",
-                "version": "1.0",
-                "reference": "public:/2019-09/MessageExamples.txt"
-            }
-        ]
+      ]
     }
+  },
+  "serviceCategorisation": {
+    "serviceType": "SWIM_COMPLIANT",
+    "lifeCycleStage": "OPERATIONAL",
+    // Onko allaoleva oikea?
+    "businessActivityType": ["AERODROME_OPERATION"],
+    "intendedConsumer": [
+      "CIVIL_AIRSPACE_USER",
+      "MILITARY_AIRSPACE_USER",
+      "CIVIL_AIR_NAVIGATION_SERVICE_PROVIDER",
+      "MILITARY_AIR_NAVIGATION_SERVICE_PROVIDER",
+      "AIR_TRAFFIC_SERVICE_PROVIDER",
+      "REGULATED_METEOROLOGICAL_SERVICE_PROVIDER",
+      "AERONAUTICAL_INFORMATION_SERVICE_PROVIDER",
+      "COMMUNICATION_NAVIGATION_AND_SURVEILLANCE_SERVICE_PROVIDER",
+      "PROVIDER_OF_DATA_SERVICES",
+      "NETWORK_MANAGER",
+      "AIRPORT_OPERATOR",
+      "AIRSIDE_GROUND_HANDLER",
+      "MILITARY_DEFENCE_CENTRE "
+    ],
+    "informationCategory": [
+      "METEOROLOGICAL_INFORMATION_EXCHANGE",
+      "COOPERATIVE_NETWORK_INFORMATION_EXCHANGE",
+      "FLIGHT_INFORMATION_EXCHANGE "
+    ],
+    "applicationMessageExchangePattern": ["REQUEST_REPLY"],
+    "geospatialCategorisation": {
+      // Tarkistettava, voiko jättää tarkan alueen mainitsematta?
+      "description": "The product covers the area between 22.00° N to 70.00° N and 25.00° W to 45.00° E, with a horizontal resolution 16 km x 16 km. This includes Europe and Part of North Atlantic and northern Africa."
+    }
+  },
+  "serviceDescriptionReferences": {
+    "implementedStandard": [
+      {
+        "standardType": "SERVICE_STANDARD",
+        "isConformant": false
+      }
+    ],
+    "serviceDocument": [
+      {
+        "documentType": "INFORMATION_DEFINITION",
+        "title": "Product Description Document",
+        "version": "1.0",
+        "description": "This document is intended to serve as quick overview of the product and some guidelines to be able to use Precipitation Type ensemble forecast in aeronautical context.",
+        "reference": "https://github.com/fmidev/swim/wiki"
+      },
+
+      {
+        "documentType": "MACHINE_READABLE_SERVICE_DESCRIPTION",
+        "title": "Download service manual",
+        "version": "1.0",
+        "description": "Documentation for the download service.",
+        "reference": "https://github.com/fmidev/smartmet-plugin-download/wiki/SmartMet-plugin-download"
+      }
+    ]
+  },
+  "serviceGeneralDescription": {
+    "operationalNeed": [
+      {
+        "name": "Operational context",
+        "description": "Precipitation type service fills the need to retrieve information about weather phenomena for flight planning and total airport management. No IER was used "
+      },
+      // Tästä ei ole tietoa, voi varmaan jättää pois?
+      {
+        "name": "Information Exhange Requirements",
+        "description": "VAATIIKO TIEDONVAIHTO JOTAIN IER:ÄÄ?"
+      }
+    ],
+    // Tämä kai kuvaa sitä mitä tapahtuu kun jaetaan säädataa? Voinee jättää tyhjäksi?
+    "functionality": [
+      {
+        "name": "Download Winter Weather Precipitation Type over an area",
+        "description": "Allow the service consumer to retrieve precipitation type ensemble forecast information in the European domaine in GRIB2 format",
+        "realWorldEffect": ""
+      }
+    ],
+    "accessAndUseCondition": [
+      {
+        "type": "SECURITY_CONSTRAINT",
+        "name": "Use the apikey",
+        "description": "The access to the service is granted by the apikey in the request."
+      },
+      {
+        "type": "SECURITY_CONSTRAINT",
+        "name": "SLA",
+        "description": "The access to the service is subject to the signature of a Service Level Agreement with FMI"
+      }
+    ],
+    // Tarkistettava
+    "qualityOfService": [
+      {
+        "name": "Availability for point forecast",
+        "description": "99.9 % outside the planned outages"
+      },
+      {
+        "name": "Capacity for point forecast",
+        "description": "17 000 service requests per minute"
+      },
+      {
+        "name": "Response time for point forecast",
+        "description": "1 sec per parameter"
+      },
+      {
+        "name": "Availability maximum area",
+        "description": "99.9 % outside the planned outages"
+      },
+      {
+        "name": "Capacity for maximum area",
+        "description": "625 service requests per hour"
+      },
+      {
+        "name": "Response time for maximum area",
+        "description": "1 minute per parameter"
+      }
+    ],
+    "validation": [
+      {
+        "type": "ISO9001:2015",
+        "description": "The service production is according to ISO9001:2015 quality standard."
+      }
+    ]
+  },
+  "serviceInformationDescription": {
+    "informationDefinition": [
+      {
+        "name": "Service Information Definition",
+        "description": "The interface for the service is provided as a GRIB download service via HTTP and it is described fully in Github: https://github.com/fmidev/smartmet-plugin-download/wiki/SmartMet-plugin-download",
+        // Mikä tämä on?
+        "airmConformant": true,
+        "airmVersion": "1.0.0"
+      }
+    ]
+  },
+  "serviceTechnicalDescription": {
+    "securityMechanism": [
+      {
+        "name": "TLSv 1.2",
+        "description": "The service relies on TLSv 1.2 to provide integrity and confidentiality.",
+        "type": ["AUTHENTICATION", "CONFIDENTIALITY", "INTEGRITY"]
+      }
+    ],
+    "serviceMonitoring": {
+      "monitoringDescription": "The service is monitored, however there is no monitoring interface provided to the consumers"
+    }
+  },
+  "serviceInterface": [
+    {
+      "name": "WinterWeather Precipitation Type over an area interface",
+      "description": "The interface for the service is provided as a GRIB2 download service via HTTP and it is described fully in Github: https://github.com/fmidev/smartmet-plugin-download/wiki/SmartMet-plugin-download",
+      "interfaceProvisionSide": "PROVIDER_SIDE_INTERFACE",
+      "tiPrimitiveMessageExchangePattern": "SYNCHRONOUS_REQUEST_RESPONSE",
+      "serviceInterfaceBinding": "SWIM_TI_YP_1_0_WS_LIGHT",
+      "networkInterfaceBinding": "IPV4_UNICAST",
+      "interfaceBindingDescription": "The interface for the service is provided as a GRIB download service via HTTP. Message exchange pattern is request-response type. Typically the user makes a request to the server and in response gets a GRIB file.",
+      "endPoint": [
+        {
+          "name": "Production Service Endpoint",
+          "description": "The service is available for consumption for operational usage at this endpoint. Note that the user must set the apikey into the url at place APIKEY",
+          "address": "https://data.fmi.fi/fmi-apikey/APIKEY/download?producer=wwi&timestep=data&param=ProbabilityOfPrecFormDrizzle,ProbabilityOfPrecFormRain,ProbabilityOfPrecFormSleet,ProbabilityOfPrecFormSnow,ProbabilityOfPrecFormFreezingDrizzle,ProbabilityOfPrecFormFreezingRain&format=GRIB2"
+        }
+      ],
+      "operation": [
+        {
+          "name": "Precipitation Type Ensemble Forecast over an area",
+          "description": "TÄHÄN KUVAUS MITÄ TUOTEEN TILAUKSESSA TAPAHTUU JA KUVAUS MIKÄ ON KYSELYN VASTAUS",
+          // Tämä on Optional, voisi ehkä jättää pois?
+          "idempotency": "IDEMPOTENT",
+          "synchronicity": "SYNCHRONOUS",
+          // Tämä on Optional, voisi ehkä jättää pois?
+          "precondition": "No preconditions identified",
+          "tiProtocolMethod": ["HTTP GET"],
+          "processingConsideration": [
+            {
+              "name": "Historic time values constraint",
+              "description": "The operation does not accept time values in the past"
+            }
+          ],
+          "operationMessage": [
+            {
+              "direction": "IN",
+              "name": "PrecipitationTypeForecastToAreaRequest",
+              "isFault": false
+            },
+            {
+              "direction": "OUT",
+              "name": "PrecipitationTypeForecastToAreaResponse",
+              "isFault": false
+            }
+          ]
+        }
+      ],
+      "behaviour": [
+        {
+          "name": "nominal behaviour",
+          "description": "Each operation of the interface can be called independently."
+        }
+      ]
+    }
+  ]
 }
-
-
