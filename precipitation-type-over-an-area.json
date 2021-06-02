@@ -107,7 +107,6 @@
           "description": "The access to the service is subject to the signature of a Service Level Agreement with FMI"
         }
       ],
-      // Tarkistettava
       "qualityOfService": [
         {
           "name": "Availability for point forecast",
