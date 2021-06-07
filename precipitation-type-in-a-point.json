@@ -2,24 +2,24 @@
   "informationService": {
     "serviceInterface": [
       {
-        "name": "WinterWeather Precipitation Type over an area interface",
-        "description": "The interface for the service is provided as a GRIB2 download service via HTTP and it is described fully in Github: https://github.com/fmidev/smartmet-plugin-download/wiki/SmartMet-plugin-download",
+        "name": "WinterWeather Precipitation Type to a Point interface",
+        "description": "The interface for the service is provide via HTTP API and it is described fully in Github: https://github.com/fmidev/smartmet-plugin-timeseries/wiki/Using-the-Timeseries-API",
         "interfaceProvisionSide": "PROVIDER_SIDE_INTERFACE",
         "tiPrimitiveMessageExchangePattern": "SYNCHRONOUS_REQUEST_RESPONSE",
         "serviceInterfaceBinding": "SWIM_TI_YP_1_0_WS_LIGHT",
         "networkInterfaceBinding": "IPV4_UNICAST",
-        "interfaceBindingDescription": "The interface for the service is provided as a GRIB download service via HTTP. Message exchange pattern is request-response type. Typically the user makes a request to the server and in response gets a GRIB file.",
+        "interfaceBindingDescription": "The user interface of the service is provided to a single point requested by the customer as a time series download service via HTTP. Message exchange pattern is request-response type. Typically the user makes a request to the server and in response gets the time series file to a single desired point.",
         "endPoint": [
           {
             "name": "Production Service Endpoint",
             "description": "The service is available for consumption for operational usage at this endpoint. Note that the user must set the apikey into the url at place APIKEY",
-            "address": "https://data.fmi.fi/fmi-apikey/APIKEY/download?producer=wwi&timestep=data&param=ProbabilityOfPrecFormDrizzle,ProbabilityOfPrecFormRain,ProbabilityOfPrecFormSleet,ProbabilityOfPrecFormSnow,ProbabilityOfPrecFormFreezingDrizzle,ProbabilityOfPrecFormFreezingRain&format=GRIB2"
+            "address": "https://data.fmi.fi/fmi-apikey/APIKEY/timeseries?producer=wwi&param=ProbabilityOfPrecFormDrizzle,ProbabilityOfPrecFormRain,ProbabilityOfPrecFormSleet,ProbabilityOfPrecFormSnow,ProbabilityOfPrecFormFreezingDrizzle,ProbabilityOfPrecFormFreezingRain,latitude,longitude,utctime&latlon=62,24&format=json&timestep=data&starttime=data&endtime=data"
           }
         ],
         "operation": [
           {
-            "name": "Precipitation Type Ensemble Forecast over an area",
-            "description": "The interface for the service is provided as a GRIB download service via HTTP. Message exchange pattern is request-response type. Typically the user makes a request to the server and in response gets a GRIB file.",
+            "name": "Precipitation Type Ensemble Forecast to a Point",
+            "description": "The interface for the service is provided via HTTP API. Message exchange pattern is request-response type. Typically the user makes a request to the server and in response gets the time series file to a single desired point.",
             "synchronicity": "SYNCHRONOUS",
             "tiProtocolMethod": ["HTTP GET"],
             "processingConsideration": [
@@ -31,12 +31,12 @@
             "operationMessage": [
               {
                 "direction": "IN",
-                "name": "PrecipitationTypeForecastToAreaRequest",
+                "name": "PrecipitationTypeForecastToPointRequest",
                 "isFault": false
               },
               {
                 "direction": "OUT",
-                "name": "PrecipitationTypeForecastToAreaResponse",
+                "name": "PrecipitationTypeForecastToPointResponse",
                 "isFault": false
               }
             ]
@@ -63,7 +63,7 @@
       "informationDefinition": [
         {
           "name": "Service Information Definition",
-          "description": "The interface for the service is provided as a GRIB download service via HTTP and it is described fully in Github: https://github.com/fmidev/smartmet-plugin-download/wiki/SmartMet-plugin-download",
+          "description": "The interface for the service is provide via HTTP API and it is described fully in Github: https://github.com/fmidev/smartmet-plugin-timeseries/wiki/Using-the-Timeseries-API",
           "airmConformant": false
         }
       ]
@@ -85,13 +85,13 @@
       "operationalNeed": [
         {
           "name": "Operational context",
-          "description": "Precipitation type service fills the need to retrieve information about weather phenomena for flight planning and total airport management. No IER was used "
+          "description": "Precipitation Type service fills the need to retrieve information about weather phenomena for flight planning and total airport management. No IER was used "
         }
       ],
       "functionality": [
         {
-          "name": "Download Winter Weather Precipitation Type over an area",
-          "description": "Allow the service consumer to retrieve precipitation type ensemble forecast information in the European domaine in GRIB2 format",
+          "name": "Download Winter Weather Precipitation Type to a Point",
+          "description": "Allow the service consumer to retrieve precipitation type ensemble forecast information in the European domaine to any desired point as time serie format",
           "realWorldEffect": ""
         }
       ],
