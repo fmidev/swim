@@ -109,19 +109,7 @@
       ],
       "qualityOfService": [
         {
-          "name": "Availability for point forecast",
-          "description": "99.9 % outside the planned outages"
-        },
-        {
-          "name": "Capacity for point forecast",
-          "description": "17 000 service requests per minute"
-        },
-        {
-          "name": "Response time for point forecast",
-          "description": "1 sec per parameter"
-        },
-        {
-          "name": "Availability maximum area",
+          "name": "Availability for maximum area",
           "description": "99.9 % outside the planned outages"
         },
         {
