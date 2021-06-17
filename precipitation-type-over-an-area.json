@@ -142,7 +142,7 @@
           "title": "Product Description Document",
           "version": "1.0",
           "description": "This document is intended to serve as quick overview of the product and some guidelines to be able to use Precipitation Type ensemble forecast in aeronautical context.",
-          "reference": "https://github.com/fmidev/swim/wiki"
+          "reference": "https://github.com/fmidev/swim/wiki/Precipitation-Type-Ensemble-Forecast"
         },
 
         {
