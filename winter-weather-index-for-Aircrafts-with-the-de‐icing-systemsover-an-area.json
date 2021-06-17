@@ -2,7 +2,7 @@
   "informationService": {
     "serviceInterface": [
       {
-        "name": "WinterWeather Precipitation Type over an area interface",
+        "name": "Winter Weather Index for Aircrafts with the de‐icing systems over an area",
         "description": "The interface for the service is provided as a GRIB2 download service via HTTP and it is described fully in Github: https://github.com/fmidev/smartmet-plugin-download/wiki/SmartMet-plugin-download",
         "interfaceProvisionSide": "PROVIDER_SIDE_INTERFACE",
         "tiPrimitiveMessageExchangePattern": "SYNCHRONOUS_REQUEST_RESPONSE",
@@ -13,12 +13,12 @@
           {
             "name": "Production Service Endpoint",
             "description": "The service is available for consumption for operational usage at this endpoint. Note that the user must set the apikey into the url at place APIKEY",
-            "address": "https://data.fmi.fi/fmi-apikey/APIKEY/download?producer=wwi&timestep=data&param=ProbabilityOfPrecFormDrizzle,ProbabilityOfPrecFormRain,ProbabilityOfPrecFormSleet,ProbabilityOfPrecFormSnow,ProbabilityOfPrecFormFreezingDrizzle,ProbabilityOfPrecFormFreezingRain&format=GRIB2"
+            "address": "https://data.fmi.fi/fmi-apikey/APIKEY/download?producer=wwi&timestep=data&param=TopLinkIndex2&format=GRIB2"
           }
         ],
         "operation": [
           {
-            "name": "Precipitation Type Ensemble Forecast over an area",
+            "name": "Winter Weather Index for Aircrafts with the de‐icing systems over an area",
             "description": "The interface for the service is provided as a GRIB download service via HTTP. Message exchange pattern is request-response type. Typically the user makes a request to the server and in response gets a GRIB file.",
             "synchronicity": "SYNCHRONOUS",
             "tiProtocolMethod": ["HTTP GET"],
@@ -31,12 +31,12 @@
             "operationMessage": [
               {
                 "direction": "IN",
-                "name": "PrecipitationTypeForecastToAreaRequest",
+                "name": "WinterWeatherIndexForAircraftsWithTheDeIcingSystemsAreaRequest",
                 "isFault": false
               },
               {
                 "direction": "OUT",
-                "name": "PrecipitationTypeForecastToAreaResponse",
+                "name": "WinterWeatherIndexForAircraftsWithTheDeIcingSystemsAreaResponse",
                 "isFault": false
               }
             ]
@@ -85,13 +85,13 @@
       "operationalNeed": [
         {
           "name": "Operational context",
-          "description": "Precipitation type service fills the need to retrieve information about weather phenomena for flight planning and total airport management. No IER was used "
+          "description": "Winter Weather Index for Aircrafts with the de‐icing systems service fills the need to retrieve information about weather phenomena for flight planning and total airport management. No IER was used "
         }
       ],
       "functionality": [
         {
-          "name": "Download Winter Weather Precipitation Type over an area",
-          "description": "Allow the service consumer to retrieve precipitation type ensemble forecast information in the European domaine in GRIB2 format",
+          "name": "Download Winter Weather Index for Aircrafts with the de‐icing systems over an area",
+          "description": "Allow the service consumer to retrieve Winter Weather Index for Aircrafts with the de‐icing systems forecast information in the European domaine in GRIB2 format",
           "realWorldEffect": ""
         }
       ],
@@ -141,8 +141,8 @@
           "documentType": "INFORMATION_DEFINITION",
           "title": "Product Description Document",
           "version": "1.0",
-          "description": "This document is intended to serve as quick overview of the product and some guidelines to be able to use Precipitation Type ensemble forecast in aeronautical context.",
-          "reference": "https://github.com/fmidev/swim/wiki"
+          "description": "This document is intended to serve as quick overview of the product and some guidelines to be able to use Winter Weather Index for Aircrafts with the de‐icing systems forecast in aeronautical context.",
+          "reference": "https://github.com/fmidev/swim/wiki/Winter-Weather-Index-for-Aircrafts-with-the-de%E2%80%90icing-systems"
         },
 
         {
@@ -198,14 +198,14 @@
         }
       ],
       "serviceDescriptionIdentification": {
-        "serviceDescriptionTitle": "Winter Weather Precipitation Type over an area",
+        "serviceDescriptionTitle": "Winter Weather Index for Aircrafts with the de‐icing systems over an area",
         "serviceDescriptionEdition": "1.0",
         "serviceDescriptionReferenceDate": "2021-06-15"
       }
     },
-    "name": "Winter Weather Precipitation Type over an area",
+    "name": "Winter Weather Index for Aircrafts with the de‐icing systems over an area",
     "version": "1.0.0",
-    "serviceAbstract": "Winter Weather Precipitation type over an area -service is an ensemble forecast for precipitation type over the Europe area at the surface level. It is post-processed information from ECMWF input data and it is intended to air traffic planner, airport maintenance, air traffic control, airlines and pilots to help and prepare for Winter weather conditions. Ensemble forecast has 6 classes for precipitation: snow (solid), sleet (solid and liquid), rain (liquid), drizzle (liquid, small droplets), freezing drizzle  (liquid, small drops, below freezing point) and  freezing rain (liquid, below freezing point). The probability of precipitation is expressed as a percentage. Precipitation types can be called all at once or in desired groups or individually.",
+    "serviceAbstract": "Winter Weather Index for Aircrafts with the de‐icing systems over an area -service is a forecast for the potential impact of winter weather conditions on air traffic. Especially related to icing and need for de-icing for aircrafts with the de-icing systems. It is post-processed information from ECMWF input data and it is intended to air traffic planner, airport maintenance, air traffic control, airlines and pilots to help and prepare for Winter weather conditions. The forecast has 3 classes for severity of icing: light, moderate and heavy.",
     "serviceProvision": {
       "provider": "Finnish Meteorological Institute, FMI",
       "providerDescription": "FMI is the designated aeronautical meteorological service provider for Helsinki FIR as designated by the Ministry of Transport and Communications of Finland and as certified by Finnish Transport and Communications Agency.",
