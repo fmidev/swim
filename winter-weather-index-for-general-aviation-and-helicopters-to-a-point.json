@@ -208,7 +208,7 @@
     },
     "name": "Winter Weather Index for General Aviation and Helicopters to a Point",
     "version": "1.0.0",
-    "serviceAbstract": "Winter Weather Index for General Aviation and Helicopters to a Point -service is a forecast for the potential impact of winter weather conditions on air traffic. Especially related to icing and need for de-icing. It is post-processed information from ECMWF input data and it is intended to air traffic planner, airport maintenance, air traffic control, airlines and pilots to help and prepare for Winter weather conditions. The forecast has 3 classes for severity of icing: light, moderate and heavy.",
+    "serviceAbstract": "Winter Weather Index for General Aviation and Helicopters to a Point -service is a forecast for the potential impact of winter weather conditions on air traffic. Especially related to icing and need for de-icing for general avaition and helicopters. It is post-processed information from ECMWF input data and it is intended to air traffic planner, airport maintenance, air traffic control, airlines and pilots to help and prepare for Winter weather conditions. The forecast has 3 classes for severity of icing: light, moderate and heavy.",
     "serviceProvision": {
       "provider": "Finnish Meteorological Institute, FMI",
       "providerDescription": "FMI is the designated aeronautical meteorological service provider for Helsinki FIR as designated by the Ministry of Transport and Communications of Finland and as certified by Finnish Transport and Communications Agency.",
