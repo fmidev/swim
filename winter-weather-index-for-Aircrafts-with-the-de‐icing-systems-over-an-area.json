@@ -133,7 +133,10 @@
       "implementedStandard": [
         {
           "standardType": "SERVICE_STANDARD",
-          "isConformant": false
+          "isConformant": false,
+          "title": "",
+          "description": "",
+          "conformanceStatement": ""
         }
       ],
       "serviceDocument": [
