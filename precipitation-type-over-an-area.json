@@ -54,17 +54,18 @@
     "serviceInformationDescription": {
       "exchangeSchema": [
         {
-          "name": "JSON Service Description Schema 0.0.3",
-          "schemaLanguage": "JSON",
-          "reference": "https://ext.eurocontrol.int/swim_confluence/display/SWIM/JSON+Schema+0.0.3#JSONSchema0.0.3-JSONServiceDescriptionSchema0.0.3"
+          "name": "GRIB2",
+          "schemaLanguage": "coverage",
+          "reference": "https://old.wmo.int/extranet/pages/prog/www/WMOCodes/Guides/GRIB/GRIB2_062006.pdf"
         }
       ],
 
       "informationDefinition": [
         {
-          "name": "Service Information Definition",
-          "description": "The interface for the service is provided as a GRIB download service via HTTP and it is described fully in Github: https://github.com/fmidev/smartmet-plugin-download/wiki/SmartMet-plugin-download",
-          "airmConformant": false
+          "name": "CodePrecipitationType",
+          "description": "A code describing the precipitation types.",
+          "airmConformant": true,
+          "airmVersion": "4.1.0"
         }
       ]
     },

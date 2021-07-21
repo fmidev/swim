@@ -54,17 +54,18 @@
     "serviceInformationDescription": {
       "exchangeSchema": [
         {
-          "name": "JSON Service Description Schema 0.0.3",
-          "schemaLanguage": "JSON",
-          "reference": "https://ext.eurocontrol.int/swim_confluence/display/SWIM/JSON+Schema+0.0.3#JSONSchema0.0.3-JSONServiceDescriptionSchema0.0.3"
+          "name": "FMI Point Weather XML Schema",
+          "schemaLanguage": "XML",
+          "reference": "https://services.weatherproof.fi/schemas/pointweather_2.00.xsd"
         }
       ],
 
       "informationDefinition": [
         {
-          "name": "Service Information Definition",
-          "description": "The interface for the service is provide via HTTP API and it is described fully in Github: https://github.com/fmidev/smartmet-plugin-timeseries/wiki/Using-the-Timeseries-API",
-          "airmConformant": false
+          "name": "WinterWeatherIndex",
+          "description": "Index which describes intensity of winter weather for aircrafts which have de-icing systems.",
+          "airmConformant": true,
+          "airmVersion": "4.1.0"
         }
       ]
     },

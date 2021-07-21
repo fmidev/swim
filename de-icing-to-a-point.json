@@ -13,7 +13,7 @@
           {
             "name": "Production Service Endpoint",
             "description": "The service is available for consumption for operational usage at this endpoint. Note that the user must set the apikey into the url at place APIKEY",
-            "address": "https://data.fmi.fi/fmi-apikey/APIKEY/timeseries?producer=wwi&param=ProbabilityOfPrecFormDrizzle,ProbabilityOfPrecFormRain,ProbabilityOfPrecFormSleet,ProbabilityOfPrecFormSnow,ProbabilityOfPrecFormFreezingDrizzle,ProbabilityOfPrecFormFreezingRain,latitude,longitude,utctime&latlon=62,24&format=json&timestep=data&starttime=data&endtime=data"
+            "address": "https://data.fmi.fi/fmi-apikey/APIKEY/timeseries?producer=wwi&param=ProbabilityOfPrecFormDrizzle,ProbabilityOfPrecFormRain,ProbabilityOfPrecFormSleet,ProbabilityOfPrecFormSnow,ProbabilityOfPrecFormFreezingDrizzle,ProbabilityOfPrecFormFreezingRain,latitude,longitude,utctime&latlon=62,24&format=wxml&timestep=data&starttime=data&endtime=data"
           }
         ],
         "operation": [
@@ -54,17 +54,18 @@
     "serviceInformationDescription": {
       "exchangeSchema": [
         {
-          "name": "JSON Service Description Schema 0.0.3",
-          "schemaLanguage": "JSON",
-          "reference": "https://ext.eurocontrol.int/swim_confluence/display/SWIM/JSON+Schema+0.0.3#JSONSchema0.0.3-JSONServiceDescriptionSchema0.0.3"
+          "name": "FMI Point Weather XML Schema",
+          "schemaLanguage": "XML",
+          "reference": "https://services.weatherproof.fi/schemas/pointweather_2.00.xsd"
         }
       ],
 
       "informationDefinition": [
         {
-          "name": "Service Information Definition",
-          "description": "The interface for the service is provide via HTTP API and it is described fully in Github: https://github.com/fmidev/smartmet-plugin-timeseries/wiki/Using-the-Timeseries-API",
-          "airmConformant": false
+          "name": "Deicing",
+          "description": "De-icing operation on an aircraft that may consist of removal of snow, ice or frost from the aircraft (de-icing), and/or also application of chemicals that remain on a surface and continue to delay the reformation of ice up (anti-icing).",
+          "airmConformant": true,
+          "airmVersion": "4.1.0"
         }
       ]
     },
@@ -133,7 +134,10 @@
       "implementedStandard": [
         {
           "standardType": "SERVICE_STANDARD",
-          "isConformant": false
+          "isConformant": false,
+          "title": "",
+          "description": "",
+          "conformanceStatement": ""
         }
       ],
       "serviceDocument": [
