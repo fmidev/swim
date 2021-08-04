@@ -202,7 +202,7 @@
         }
       ],
       "serviceDescriptionIdentification": {
-        "serviceDescriptionTitle": "Winter Weather Precipitation Type to a Point",
+        "serviceDescriptionTitle": "Winter Weather Index for Aircrafts with the de‐icing systems to a point",
         "serviceDescriptionEdition": "1.0",
         "serviceDescriptionReferenceDate": "2021-06-15"
       }
