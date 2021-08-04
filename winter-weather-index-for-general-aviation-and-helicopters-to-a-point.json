@@ -135,9 +135,9 @@
         {
           "standardType": "SERVICE_STANDARD",
           "isConformant": false,
-          "title": "",
-          "description": "",
-          "conformanceStatement": ""
+          "title": "NIL",
+          "description": "NIL",
+          "conformanceStatement": "NIL"
         }
       ],
       "serviceDocument": [
