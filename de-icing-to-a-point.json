@@ -2,7 +2,7 @@
   "informationService": {
     "serviceInterface": [
       {
-        "name": "WinterWeather Precipitation Type to a Point interface",
+        "name": "WinterWeather Nowcast for De-Icing need to a Point interface",
         "description": "The interface for the service is provide via HTTP API and it is described fully in Github: https://github.com/fmidev/smartmet-plugin-timeseries/wiki/Using-the-Timeseries-API",
         "interfaceProvisionSide": "PROVIDER_SIDE_INTERFACE",
         "tiPrimitiveMessageExchangePattern": "SYNCHRONOUS_REQUEST_RESPONSE",
@@ -18,7 +18,7 @@
         ],
         "operation": [
           {
-            "name": "Precipitation Type Ensemble Forecast to a Point",
+            "name": "Nowcast for De-Icing Need to a Point",
             "description": "The interface for the service is provided via HTTP API. Message exchange pattern is request-response type. Typically the user makes a request to the server and in response gets the time series file to a single desired point.",
             "synchronicity": "SYNCHRONOUS",
             "tiProtocolMethod": ["HTTP GET"],
@@ -31,12 +31,12 @@
             "operationMessage": [
               {
                 "direction": "IN",
-                "name": "PrecipitationTypeForecastToPointRequest",
+                "name": "NowcastForDe-IcingNeetToPointRequest",
                 "isFault": false
               },
               {
                 "direction": "OUT",
-                "name": "PrecipitationTypeForecastToPointResponse",
+                "name": "NowcastForDe-IcingNeetToPointResponse",
                 "isFault": false
               }
             ]
@@ -62,7 +62,7 @@
 
       "informationDefinition": [
         {
-          "name": "Deicing",
+          "name": "De-Icing",
           "description": "De-icing operation on an aircraft that may consist of removal of snow, ice or frost from the aircraft (de-icing), and/or also application of chemicals that remain on a surface and continue to delay the reformation of ice up (anti-icing).",
           "airmConformant": true,
           "airmVersion": "4.1.0"
@@ -86,7 +86,7 @@
       "operationalNeed": [
         {
           "name": "Operational context",
-          "description": "Precipitation Type service fills the need to retrieve information about weather phenomena for flight planning and total airport management. No IER was used "
+          "description": "Nowcast for De-Icing Need -service fills the need to retrieve information about the need of aircraft de-icing in next few hours. No IER was used "
         }
       ],
       "functionality": [
