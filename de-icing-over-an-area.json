@@ -93,7 +93,7 @@
         {
           "name": "Download Nowcast for De-Icing Need over an area",
           "description": "Allow the service consumer to retrieve Nowcast for De-Icing Need information in the European domaine in GRIB2 format",
-          "realWorldEffect": ""
+          "realWorldEffect": "NIL"
         }
       ],
       "accessAndUseCondition": [
@@ -135,9 +135,9 @@
         {
           "standardType": "SERVICE_STANDARD",
           "isConformant": false,
-          "title": "",
-          "description": "",
-          "conformanceStatement": ""
+          "title": "NIL",
+          "description": "NIL",
+          "conformanceStatement": "NIL"
         }
       ],
       "serviceDocument": [
@@ -221,13 +221,13 @@
           "name": "access request",
           "description": "to request access to the service, send an e-mail to ilmailu@fmi.fi",
           "email": "ilmailu@fmi.fi",
-          "phoneNumber": ""
+          "phoneNumber": "NIL"
         },
         {
           "name": "service support",
           "description": "For any issues related to the operation of Winter Weather Nowcast for De-Icing Need over an area ",
           "email": "ilmailu@fmi.fi",
-          "phoneNumber": ""
+          "phoneNumber": "NIL"
         }
       ]
     }
