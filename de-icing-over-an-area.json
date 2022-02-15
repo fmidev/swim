@@ -2,7 +2,7 @@
   "informationService": {
     "serviceInterface": [
       {
-        "name": "WinterWeather Precipitation Type over an area interface",
+        "name": "WinterWeather Nowcast for De-Icing Need over an area interface",
         "description": "The interface for the service is provided as a GRIB2 download service via HTTP and it is described fully in Github: https://github.com/fmidev/smartmet-plugin-download/wiki/SmartMet-plugin-download",
         "interfaceProvisionSide": "PROVIDER_SIDE_INTERFACE",
         "tiPrimitiveMessageExchangePattern": "SYNCHRONOUS_REQUEST_RESPONSE",
@@ -18,7 +18,7 @@
         ],
         "operation": [
           {
-            "name": "Precipitation Type Ensemble Forecast over an area",
+            "name": "Nowcast for De-Icing Need over an are",
             "description": "The interface for the service is provided as a GRIB download service via HTTP. Message exchange pattern is request-response type. Typically the user makes a request to the server and in response gets a GRIB file.",
             "synchronicity": "SYNCHRONOUS",
             "tiProtocolMethod": ["HTTP GET"],
@@ -31,12 +31,12 @@
             "operationMessage": [
               {
                 "direction": "IN",
-                "name": "PrecipitationTypeForecastToAreaRequest",
+                "name": "NowcastForDe-IcingNeedOverAnAreRequest",
                 "isFault": false
               },
               {
                 "direction": "OUT",
-                "name": "PrecipitationTypeForecastToAreaResponse",
+                "name": "NowcastForDe-IcingNeedOverAnAreResponse",
                 "isFault": false
               }
             ]
@@ -86,13 +86,13 @@
       "operationalNeed": [
         {
           "name": "Operational context",
-          "description": "Precipitation type service fills the need to retrieve information about weather phenomena for flight planning and total airport management. No IER was used "
+          "description": "De-Icing Nowcast type service fills the need to retrieve information about weather phenomena for flight planning and total airport management. No IER was used "
         }
       ],
       "functionality": [
         {
-          "name": "Download Winter Weather Precipitation Type over an area",
-          "description": "Allow the service consumer to retrieve precipitation type ensemble forecast information in the European domaine in GRIB2 format",
+          "name": "Download Nowcast for De-Icing Need over an area",
+          "description": "Allow the service consumer to retrieve Nowcast for De-Icing Need information in the European domaine in GRIB2 format",
           "realWorldEffect": ""
         }
       ],
@@ -145,7 +145,7 @@
           "documentType": "INFORMATION_DEFINITION",
           "title": "Product Description Document",
           "version": "1.0",
-          "description": "This document is intended to serve as quick overview of the product and some guidelines to be able to use Precipitation Type ensemble forecast in aeronautical context.",
+          "description": "This document is intended to serve as quick overview of the product and some guidelines to be able to use WinterWeather Nowcast for De-Icing Need in aeronautical context.",
           "reference": "https://github.com/fmidev/swim/wiki"
         },
 
@@ -207,9 +207,9 @@
         "serviceDescriptionReferenceDate": "2021-06-15"
       }
     },
-    "name": "Winter Weather Precipitation Type over an area",
+    "name": "Winter Weather Nowcast for De-Icing Need over an area",
     "version": "1.0.0",
-    "serviceAbstract": "Winter Weather Precipitation type over an area -service is an ensemble forecast for precipitation type over the Europe area at the surface level. It is post-processed information from ECMWF input data and it is intended to air traffic planner, airport maintenance, air traffic control, airlines and pilots to help and prepare for Winter weather conditions. Ensemble forecast has 6 classes for precipitation: snow (solid), sleet (solid and liquid), rain (liquid), drizzle (liquid, small droplets), freezing drizzle  (liquid, small drops, below freezing point) and  freezing rain (liquid, below freezing point). The probability of precipitation is expressed as a percentage. Precipitation types can be called all at once or in desired groups or individually.",
+    "serviceAbstract": "Winter Weather Nowcast for De-Icing Need over an area -service is a nowcast-type forecast of aircraft de-icing needs before takeoff. It is post-processed information from ECMWF data and Eurepean radar network (OPERA) information. It is intended to air traffic planner, airport maintenance, air traffic control, airlines and pilots to help and prepare for Winter weather conditions.",
     "serviceProvision": {
       "provider": "Finnish Meteorological Institute, FMI",
       "providerDescription": "FMI is the designated aeronautical meteorological service provider for Helsinki FIR as designated by the Ministry of Transport and Communications of Finland and as certified by Finnish Transport and Communications Agency.",
@@ -225,7 +225,7 @@
         },
         {
           "name": "service support",
-          "description": "For any issues related to the operation of Winter Weather Precipitation type service ",
+          "description": "For any issues related to the operation of Winter Weather Nowcast for De-Icing Need over an area ",
           "email": "ilmailu@fmi.fi",
           "phoneNumber": ""
         }
