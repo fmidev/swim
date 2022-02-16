@@ -225,7 +225,7 @@
         },
         {
           "name": "service support",
-          "description": "For any issues related to the operation of Winter Weather Precipitation type service ",
+          "description": "For any issues related to the operation of Winter Weather Nowcast for Aircraft De-Icing Need service ",
           "email": "ilmailu@fmi.fi",
           "phoneNumber": "NIL"
         }
