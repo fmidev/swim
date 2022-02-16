@@ -209,7 +209,7 @@
     },
     "name": "Winter Weather Nowcast for Aircraft De-Icing Need to a Point",
     "version": "1.0.0",
-    "serviceAbstract": "Winter Weather Nowcast for Aircraft De-Icing Need to a Point -service is a nowcast-type forecast of aircraft de-icing needs before takeoff. It is post-processed information from ECMWF data and Eurepean radar network (OPERA) information. It is intended to air traffic planner, airport maintenance, air traffic control, airlines and pilots to help and prepare for Winter weather conditions. Ensemble forecast has 6 classes for precipitation: snow (solid), sleet (solid and liquid), rain (liquid), drizzle (liquid, small droplets), freezing drizzle  (liquid, small drops, below freezing point) and  freezing rain (liquid, below freezing point). The probability of precipitation is expressed as a percentage. Precipitation types can be called all at once or in desired groups or individually.",
+    "serviceAbstract": "Winter Weather Nowcast for Aircraft De-Icing Need to a Point -service is a nowcast-type forecast of aircraft de-icing needs before takeoff. It is post-processed information from ECMWF data and Eurepean radar network (OPERA) information. It is intended to air traffic planner, airport maintenance, air traffic control, airlines and pilots to help and prepare for actions in Winter weather conditions.",
     "serviceProvision": {
       "provider": "Finnish Meteorological Institute, FMI",
       "providerDescription": "FMI is the designated aeronautical meteorological service provider for Helsinki FIR as designated by the Ministry of Transport and Communications of Finland and as certified by Finnish Transport and Communications Agency.",
