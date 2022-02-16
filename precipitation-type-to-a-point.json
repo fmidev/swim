@@ -12,8 +12,8 @@
         "endPoint": [
           {
             "name": "Production Service Endpoint",
-            "description": "The service is available for consumption for operational usage at this endpoint. Note that the user must set the apikey into the url at place APIKEY",
-            "address": "https://data.fmi.fi/fmi-apikey/APIKEY/timeseries?producer=wwi&param=ProbabilityOfPrecFormDrizzle,ProbabilityOfPrecFormRain,ProbabilityOfPrecFormSleet,ProbabilityOfPrecFormSnow,ProbabilityOfPrecFormFreezingDrizzle,ProbabilityOfPrecFormFreezingRain,latitude,longitude,utctime&latlon=62,24&format=json&timestep=data&starttime=data&endtime=data"
+            "description": "The service is available for consumption for operational usage at this endpoint. Note that the user must set the apikey into the url at place APIKEY and latitude longitude information at place XX,YY",
+            "address": "https://data.fmi.fi/fmi-apikey/APIKEY/timeseries?producer=wwi&param=ProbabilityOfPrecFormDrizzle,ProbabilityOfPrecFormRain,ProbabilityOfPrecFormSleet,ProbabilityOfPrecFormSnow,ProbabilityOfPrecFormFreezingDrizzle,ProbabilityOfPrecFormFreezingRain,latitude,longitude,utctime&latlon=XX,YY&format=json&timestep=data&starttime=data&endtime=data"
           }
         ],
         "operation": [
