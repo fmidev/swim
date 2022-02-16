@@ -2,7 +2,7 @@
   "informationService": {
     "serviceInterface": [
       {
-        "name": "WinterWeather Nowcast for De-Icing need to a Point interface",
+        "name": "WinterWeather Nowcast for Aircraft De-Icing need to a Point interface",
         "description": "The interface for the service is provide via HTTP API and it is described fully in Github: https://github.com/fmidev/smartmet-plugin-timeseries/wiki/Using-the-Timeseries-API",
         "interfaceProvisionSide": "PROVIDER_SIDE_INTERFACE",
         "tiPrimitiveMessageExchangePattern": "SYNCHRONOUS_REQUEST_RESPONSE",
@@ -18,7 +18,7 @@
         ],
         "operation": [
           {
-            "name": "Nowcast for De-Icing Need to a Point",
+            "name": "Nowcast for Aircraft De-Icing Need to a Point",
             "description": "The interface for the service is provided via HTTP API. Message exchange pattern is request-response type. Typically the user makes a request to the server and in response gets the time series file to a single desired point.",
             "synchronicity": "SYNCHRONOUS",
             "tiProtocolMethod": ["HTTP GET"],
@@ -31,12 +31,12 @@
             "operationMessage": [
               {
                 "direction": "IN",
-                "name": "NowcastForDe-IcingNeetToPointRequest",
+                "name": "NowcastForAircraftDe-IcingNeetToAPointRequest",
                 "isFault": false
               },
               {
                 "direction": "OUT",
-                "name": "NowcastForDe-IcingNeetToPointResponse",
+                "name": "NowcastForAircraftDe-IcingNeetToAPointResponse",
                 "isFault": false
               }
             ]
@@ -86,14 +86,14 @@
       "operationalNeed": [
         {
           "name": "Operational context",
-          "description": "Nowcast for De-Icing Need -service fills the need to retrieve information about the need of aircraft de-icing in next few hours. No IER was used "
+          "description": "De-Icing Nowcast type service response the need for information on the need for de-icing aircraft in the coming hours. No IER was used "
         }
       ],
       "functionality": [
         {
-          "name": "Download Winter Weather Precipitation Type to a Point",
-          "description": "Allow the service consumer to retrieve precipitation type ensemble forecast information in the European domaine to any desired point as time serie format",
-          "realWorldEffect": ""
+          "name": "Download Winter Weather Nowcast for Aircraft De-Icing Need to a Point",
+          "description": "Allow the service consumer to retrieve nowcast for aircraft de-icing need information in the European domaine to any desired point as time serie format",
+          "realWorldEffect": "NIL"
         }
       ],
       "accessAndUseCondition": [
@@ -135,9 +135,9 @@
         {
           "standardType": "SERVICE_STANDARD",
           "isConformant": false,
-          "title": "",
-          "description": "",
-          "conformanceStatement": ""
+          "title": "NIL",
+          "description": "NIL",
+          "conformanceStatement": "NIL"
         }
       ],
       "serviceDocument": [
@@ -145,7 +145,7 @@
           "documentType": "INFORMATION_DEFINITION",
           "title": "Product Description Document",
           "version": "1.0",
-          "description": "This document is intended to serve as quick overview of the product and some guidelines to be able to use Precipitation Type ensemble forecast in aeronautical context.",
+          "description": "This document is intended to serve as quick overview of the product and some guidelines to be able to use Winter Weather Nowcast for Aircraft De-Icing Need in aeronautical context.",
           "reference": "https://github.com/fmidev/swim/wiki"
         },
 
@@ -202,14 +202,14 @@
         }
       ],
       "serviceDescriptionIdentification": {
-        "serviceDescriptionTitle": "Winter Weather Precipitation Type to a Point",
+        "serviceDescriptionTitle": "Winter Weather Nowcast for Aircraft De-Icing Need to a Point",
         "serviceDescriptionEdition": "1.0",
         "serviceDescriptionReferenceDate": "2021-06-15"
       }
     },
-    "name": "Winter Weather Precipitation Type to a Point",
+    "name": "Winter Weather Nowcast for Aircraft De-Icing Need to a Point",
     "version": "1.0.0",
-    "serviceAbstract": "Winter Weather Precipitation Type to a Point -service is an ensemble forecast for precipitation type to a single point at the European domain. It is post-processed information from ECMWF input data and it is intended to air traffic planner, airport maintenance, air traffic control, airlines and pilots to help and prepare for Winter weather conditions. Ensemble forecast has 6 classes for precipitation: snow (solid), sleet (solid and liquid), rain (liquid), drizzle (liquid, small droplets), freezing drizzle  (liquid, small drops, below freezing point) and  freezing rain (liquid, below freezing point). The probability of precipitation is expressed as a percentage. Precipitation types can be called all at once or in desired groups or individually.",
+    "serviceAbstract": "Winter Weather Nowcast for Aircraft De-Icing Need to a Point -service is a nowcast-type forecast of aircraft de-icing needs before takeoff. It is post-processed information from ECMWF data and Eurepean radar network (OPERA) information. It is intended to air traffic planner, airport maintenance, air traffic control, airlines and pilots to help and prepare for Winter weather conditions. Ensemble forecast has 6 classes for precipitation: snow (solid), sleet (solid and liquid), rain (liquid), drizzle (liquid, small droplets), freezing drizzle  (liquid, small drops, below freezing point) and  freezing rain (liquid, below freezing point). The probability of precipitation is expressed as a percentage. Precipitation types can be called all at once or in desired groups or individually.",
     "serviceProvision": {
       "provider": "Finnish Meteorological Institute, FMI",
       "providerDescription": "FMI is the designated aeronautical meteorological service provider for Helsinki FIR as designated by the Ministry of Transport and Communications of Finland and as certified by Finnish Transport and Communications Agency.",
@@ -221,13 +221,13 @@
           "name": "access request",
           "description": "to request access to the service, send an e-mail to ilmailu@fmi.fi",
           "email": "ilmailu@fmi.fi",
-          "phoneNumber": ""
+          "phoneNumber": "NIL"
         },
         {
           "name": "service support",
           "description": "For any issues related to the operation of Winter Weather Precipitation type service ",
           "email": "ilmailu@fmi.fi",
-          "phoneNumber": ""
+          "phoneNumber": "NIL"
         }
       ]
     }
