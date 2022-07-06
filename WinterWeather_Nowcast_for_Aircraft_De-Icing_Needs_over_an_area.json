@@ -13,7 +13,7 @@
           {
             "name": "Production Service Endpoint",
             "description": "The service is available for consumption for operational usage at this endpoint. Note that the user must set the apikey into the url at place APIKEY",
-            "address": "https://data.fmi.fi/fmi-apikey/APIKEY/download?producer=wwi&timestep=data&param=ProbabilityOfPrecFormDrizzle,ProbabilityOfPrecFormRain,ProbabilityOfPrecFormSleet,ProbabilityOfPrecFormSnow,ProbabilityOfPrecFormFreezingDrizzle,ProbabilityOfPrecFormFreezingRain&format=GRIB2"
+            "address": "https://data.fmi.fi/fmi-apikey/APIKEY/download?producer=diw&timestep=data&param=ProbabilityOfDIW0,ProbabilityOfDIW1,ProbabilityOfDIW2,ProbabilityOfDIW3&format=GRIB2"
           }
         ],
         "operation": [
