@@ -2,7 +2,7 @@
   "informationService": {
     "serviceInterface": [
       {
-        "name": "WinterWeather Nowcast for Aircraft De-Icing need to a Point interface",
+        "name": "WinterWeather Nowcast for Aircraft De-Icing Needs to a Point interface",
         "description": "The interface for the service is provide via HTTP API and it is described fully in Github: https://github.com/fmidev/smartmet-plugin-timeseries/wiki/Using-the-Timeseries-API",
         "interfaceProvisionSide": "PROVIDER_SIDE_INTERFACE",
         "tiPrimitiveMessageExchangePattern": "SYNCHRONOUS_REQUEST_RESPONSE",
