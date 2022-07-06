@@ -18,7 +18,7 @@
         ],
         "operation": [
           {
-            "name": "Winter Weather Nowcast for Aitcraft De-Icing Need over an area",
+            "name": "Winter Weather Nowcast for Aircraft De-Icing Need over an area",
             "description": "The interface for the service is provided as a GRIB download service via HTTP. Message exchange pattern is request-response type. Typically the user makes a request to the server and in response gets a GRIB file.",
             "synchronicity": "SYNCHRONOUS",
             "tiProtocolMethod": ["HTTP GET"],
@@ -91,7 +91,7 @@
       ],
       "functionality": [
         {
-          "name": "Download Winter Weather Nowcast for Aircraft De-Icing Need over an area",
+          "name": "Download Winter Weather Nowcast for Aircraft De-Icing Needs over an area",
           "description": "Allow the service consumer to retrieve nowcast for aircraft de-icing need information in the European domaine in GRIB2 format",
           "realWorldEffect": "NIL"
         }
