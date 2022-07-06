@@ -2,7 +2,7 @@
   "informationService": {
     "serviceInterface": [
       {
-        "name": "Winter Weather Nowcast for Aircraft De-Icing Need over an area interface",
+        "name": "Winter Weather Nowcast for Aircraft De-Icing Needs over an area interface",
         "description": "The interface for the service is provided as a GRIB2 download service via HTTP and it is described fully in Github: https://github.com/fmidev/smartmet-plugin-download/wiki/SmartMet-plugin-download",
         "interfaceProvisionSide": "PROVIDER_SIDE_INTERFACE",
         "tiPrimitiveMessageExchangePattern": "SYNCHRONOUS_REQUEST_RESPONSE",
