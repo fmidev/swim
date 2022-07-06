@@ -13,12 +13,12 @@
           {
             "name": "Production Service Endpoint",
             "description": "The service is available for consumption for operational usage at this endpoint. Note that the user must set the apikey into the url at place APIKEY and latitude longitude information at place XX,YY",
-            "address": "https://data.fmi.fi/fmi-apikey/APIKEY/timeseries?param=utctime,DeIcingClass0Probability,DeIcingClass1Probability,DeIcingClass2Probability,DeIcingClass3Probability&timestep=data&producer=deicingweather&lonlat=XX,YY&format=wxml"
+            "address": "https://data.fmi.fi/fmi-apikey/APIKEY/timeseries?producer=diw&param=ProbabilityOfDIW0,ProbabilityOfDIW1,ProbabilityOfDIW2,ProbabilityOfDIW3,latitude,longitude,utctime&latlon=XX,YY&format=json&timestep=data&starttime=data&endtime=data"
           }
         ],
         "operation": [
           {
-            "name": "Nowcast for Aircraft De-Icing Need to a Point",
+            "name": "Nowcast for Aircraft De-Icing Needs to a Point",
             "description": "The interface for the service is provided via HTTP API. Message exchange pattern is request-response type. Typically the user makes a request to the server and in response gets the time series file to a single desired point.",
             "synchronicity": "SYNCHRONOUS",
             "tiProtocolMethod": ["HTTP GET"],
@@ -31,12 +31,12 @@
             "operationMessage": [
               {
                 "direction": "IN",
-                "name": "NowcastForAircraftDe-IcingNeetToAPointRequest",
+                "name": "NowcastForAircraftDe-IcingNeedsToAPointRequest",
                 "isFault": false
               },
               {
                 "direction": "OUT",
-                "name": "NowcastForAircraftDe-IcingNeetToAPointResponse",
+                "name": "NowcastForAircraftDe-IcingNeedsToAPointResponse",
                 "isFault": false
               }
             ]
@@ -91,7 +91,7 @@
       ],
       "functionality": [
         {
-          "name": "Download Winter Weather Nowcast for Aircraft De-Icing Need to a Point",
+          "name": "Download Winter Weather Nowcast for Aircraft De-Icing Needs to a Point",
           "description": "Allow the service consumer to retrieve nowcast for aircraft de-icing need information in the European domaine to any desired point as time serie format",
           "realWorldEffect": "NIL"
         }
@@ -145,7 +145,7 @@
           "documentType": "INFORMATION_DEFINITION",
           "title": "Product Description Document",
           "version": "1.0",
-          "description": "This document is intended to serve as quick overview of the product and some guidelines to be able to use Winter Weather Nowcast for Aircraft De-Icing Need in aeronautical context.",
+          "description": "This document is intended to serve as quick overview of the product and some guidelines to be able to use Winter Weather Nowcast for Aircraft De-Icing Needs in aeronautical context.",
           "reference": "https://github.com/fmidev/swim/wiki"
         },
 
@@ -202,14 +202,14 @@
         }
       ],
       "serviceDescriptionIdentification": {
-        "serviceDescriptionTitle": "Winter Weather Nowcast for Aircraft De-Icing Need to a Point",
+        "serviceDescriptionTitle": "Winter Weather Nowcast for Aircraft De-Icing Needs to a Point",
         "serviceDescriptionEdition": "1.0",
         "serviceDescriptionReferenceDate": "2021-06-15"
       }
     },
-    "name": "Winter Weather Nowcast for Aircraft De-Icing Need to a Point",
+    "name": "Winter Weather Nowcast for Aircraft De-Icing Needs to a Point",
     "version": "1.0.0",
-    "serviceAbstract": "Winter Weather Nowcast for Aircraft De-Icing Need to a Point -service is a nowcast-type forecast of aircraft de-icing needs before takeoff. It is post-processed information from ECMWF data and European radar network (OPERA) information. It is intended to air traffic planner, airport maintenance, air traffic control, airlines and pilots to help and prepare for actions in Winter weather conditions.",
+    "serviceAbstract": "Winter Weather Nowcast for Aircraft De-Icing Needs to a Point -service is a nowcast-type forecast of aircraft de-icing need before takeoff. It is post-processed information from ECMWF data and European radar network (OPERA) information. It is intended to air traffic planner, airport maintenance, air traffic control, airlines and pilots to help and prepare for actions in Winter weather conditions.",
     "serviceProvision": {
       "provider": "Finnish Meteorological Institute, FMI",
       "providerDescription": "FMI is the designated aeronautical meteorological service provider for Helsinki FIR as designated by the Ministry of Transport and Communications of Finland and as certified by Finnish Transport and Communications Agency.",
@@ -225,7 +225,7 @@
         },
         {
           "name": "service support",
-          "description": "For any issues related to the operation of Winter Weather Nowcast for Aircraft De-Icing Need service ",
+          "description": "For any issues related to the operation of Winter Weather Nowcast for Aircraft De-Icing Needs service ",
           "email": "ilmailu@fmi.fi",
           "phoneNumber": "NIL"
         }
