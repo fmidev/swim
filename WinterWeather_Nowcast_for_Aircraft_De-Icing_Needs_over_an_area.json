@@ -18,7 +18,7 @@
         ],
         "operation": [
           {
-            "name": "Winter Weather Nowcast for Aircraft De-Icing Need over an area",
+            "name": "Winter Weather Nowcast for Aircraft De-Icing Needs over an area",
             "description": "The interface for the service is provided as a GRIB download service via HTTP. Message exchange pattern is request-response type. Typically the user makes a request to the server and in response gets a GRIB file.",
             "synchronicity": "SYNCHRONOUS",
             "tiProtocolMethod": ["HTTP GET"],
@@ -31,12 +31,12 @@
             "operationMessage": [
               {
                 "direction": "IN",
-                "name": "NowcastForAircraftDe-IcingNeedOverAnAreRequest",
+                "name": "NowcastForAircraftDe-IcingNeedsOverAnAreRequest",
                 "isFault": false
               },
               {
                 "direction": "OUT",
-                "name": "NowcastForAircraftDe-IcingNeedOverAnAreResponse",
+                "name": "NowcastForAircraftDe-IcingNeedsOverAnAreResponse",
                 "isFault": false
               }
             ]
@@ -145,7 +145,7 @@
           "documentType": "INFORMATION_DEFINITION",
           "title": "Product Description Document",
           "version": "1.0",
-          "description": "This document is intended to serve as quick overview of the product and some guidelines to be able to use Winter Weather Nowcast for Aricraft De-Icing Need in aeronautical context.",
+          "description": "This document is intended to serve as quick overview of the product and some guidelines to be able to use Winter Weather Nowcast for Aricraft De-Icing Needs in aeronautical context.",
           "reference": "https://github.com/fmidev/swim/wiki"
         },
 
@@ -202,14 +202,14 @@
         }
       ],
       "serviceDescriptionIdentification": {
-        "serviceDescriptionTitle": "Winter Weather Nowcast for Aircraft De-Icing Need over an area",
+        "serviceDescriptionTitle": "Winter Weather Nowcast for Aircraft De-Icing Needs over an area",
         "serviceDescriptionEdition": "1.0",
         "serviceDescriptionReferenceDate": "2021-06-15"
       }
     },
     "name": "Winter Weather Nowcast for Aircraft De-Icing Need over an area",
     "version": "1.0.0",
-    "serviceAbstract": "Winter Weather Nowcast for Aircraft De-Icing Need over an area -service is a nowcast-type forecast of aircraft de-icing needs before takeoff. It is post-processed information from ECMWF data and European radar network (OPERA) information. It is intended to air traffic planner, airport maintenance, air traffic control, airlines and pilots to help and prepare for actions in Winter weather conditions.",
+    "serviceAbstract": "Winter Weather Nowcast for Aircraft De-Icing Needs over an area -service is a nowcast-type forecast of aircraft de-icing needs before takeoff. It is post-processed information from ECMWF data and European radar network (OPERA) information. It is intended to air traffic planner, airport maintenance, air traffic control, airlines and pilots to help and prepare for actions in Winter weather conditions.",
     "serviceProvision": {
       "provider": "Finnish Meteorological Institute, FMI",
       "providerDescription": "FMI is the designated aeronautical meteorological service provider for Helsinki FIR as designated by the Ministry of Transport and Communications of Finland and as certified by Finnish Transport and Communications Agency.",
