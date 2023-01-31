@@ -2,7 +2,7 @@
   "informationService": {
     "serviceInterface": [
       {
-        "name": "WinterWeather Precipitation Type to a Point interface",
+        "name": "Precip Type/ Point interface",
         "description": "The interface for the service is provide via HTTP API and it is described fully in Github: https://github.com/fmidev/smartmet-plugin-timeseries/wiki/Using-the-Timeseries-API",
         "interfaceProvisionSide": "PROVIDER_SIDE_INTERFACE",
         "tiPrimitiveMessageExchangePattern": "SYNCHRONOUS_REQUEST_RESPONSE",
@@ -18,7 +18,7 @@
         ],
         "operation": [
           {
-            "name": "Precipitation Type Ensemble Forecast to a Point",
+            "name": "Precip Type/ Point",
             "description": "The interface for the service is provided via HTTP API. Message exchange pattern is request-response type. Typically the user makes a request to the server and in response gets the time series file to a single desired point.",
             "synchronicity": "SYNCHRONOUS",
             "tiProtocolMethod": ["HTTP GET"],
@@ -86,7 +86,7 @@
       "operationalNeed": [
         {
           "name": "Operational context",
-          "description": "Precipitation Type service fills the need to retrieve information about weather phenomena for flight planning and total airport management. No IER was used "
+          "description": "Precip Type/ point service fills the need to retrieve information about weather phenomena for flight planning and total airport management. No IER was used "
         }
       ],
       "functionality": [
@@ -202,14 +202,14 @@
         }
       ],
       "serviceDescriptionIdentification": {
-        "serviceDescriptionTitle": "Winter Weather Precipitation Type to a Point",
+        "serviceDescriptionTitle": "Precip Type/ Point",
         "serviceDescriptionEdition": "1.0",
         "serviceDescriptionReferenceDate": "2021-06-15"
       }
     },
-    "name": "Winter Weather Precipitation Type to a Point",
+    "name": "Precip Type/ Point",
     "version": "1.0.0",
-    "serviceAbstract": "Winter Weather Precipitation Type to a Point -service is an ensemble forecast for precipitation type to a single point at the European domain. It is post-processed information from ECMWF input data and it is intended to air traffic planner, airport maintenance, air traffic control, airlines and pilots to help and prepare for Winter weather conditions. Ensemble forecast has 6 classes for precipitation: snow (solid), sleet (solid and liquid), rain (liquid), drizzle (liquid, small droplets), freezing drizzle  (liquid, small drops, below freezing point) and  freezing rain (liquid, below freezing point). The probability of precipitation is expressed as a percentage. Precipitation types can be called all at once or in desired groups or individually.",
+    "serviceAbstract": "Precip Type/ Point -service is an ensemble forecast for precipitation type to a single point at the European domain. It is a part of FMI's  Winter Weather service family. It is post-processed information from ECMWF input data and it is intended to air traffic planner, airport maintenance, air traffic control, airlines and pilots to help and prepare for Winter weather conditions. Ensemble forecast has 6 classes for precipitation: snow (solid), sleet (solid and liquid), rain (liquid), drizzle (liquid, small droplets), freezing drizzle  (liquid, small drops, below freezing point) and  freezing rain (liquid, below freezing point). The probability of precipitation is expressed as a percentage. Precipitation types can be called all at once or in desired groups or individually.",
     "serviceProvision": {
       "provider": "Finnish Meteorological Institute, FMI",
       "providerDescription": "FMI is the designated aeronautical meteorological service provider for Helsinki FIR as designated by the Ministry of Transport and Communications of Finland and as certified by Finnish Transport and Communications Agency.",
@@ -225,7 +225,7 @@
         },
         {
           "name": "service support",
-          "description": "For any issues related to the operation of Winter Weather Precipitation type service ",
+          "description": "For any issues related to the operation of Precipi Type/ point service ",
           "email": "ilmailu@fmi.fi",
           "phoneNumber": ""
         }
