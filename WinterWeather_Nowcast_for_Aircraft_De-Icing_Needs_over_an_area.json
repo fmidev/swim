@@ -202,7 +202,7 @@
         }
       ],
       "serviceDescriptionIdentification": {
-        "serviceDescriptionTitle": "Winter Weather Nowcast for Aircraft De-Icing Needs over an area",
+        "serviceDescriptionTitle": "De-Icing Need - area",
         "serviceDescriptionEdition": "1.0",
         "serviceDescriptionReferenceDate": "2021-06-15"
       }
@@ -225,7 +225,7 @@
         },
         {
           "name": "service support",
-          "description": "For any issues related to the operation of Winter Weather Nowcast for De-Icing Need over an area ",
+          "description": "For any issues related to the operation of De-Icing Need - area ",
           "email": "ilmailu@fmi.fi",
           "phoneNumber": "NIL"
         }
