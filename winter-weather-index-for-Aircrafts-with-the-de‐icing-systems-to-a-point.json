@@ -2,7 +2,7 @@
   "informationService": {
     "serviceInterface": [
       {
-        "name": "Winter Weather Index for Aircrafts with the de‐icing systems to a Point interface",
+        "name": "WinterWXindex1/point interface",
         "description": "The interface for the service is provide via HTTP API and it is described fully in Github: https://github.com/fmidev/smartmet-plugin-timeseries/wiki/Using-the-Timeseries-API",
         "interfaceProvisionSide": "PROVIDER_SIDE_INTERFACE",
         "tiPrimitiveMessageExchangePattern": "SYNCHRONOUS_REQUEST_RESPONSE",
@@ -18,7 +18,7 @@
         ],
         "operation": [
           {
-            "name": "Winter Weather Index for Aircrafts with the de‐icing systems to a Point",
+            "name": "WinterWXindex1/point",
             "description": "The interface for the service is provided via HTTP API. Message exchange pattern is request-response type. Typically the user makes a request to the server and in response gets the time series file to a single desired point.",
             "synchronicity": "SYNCHRONOUS",
             "tiProtocolMethod": ["HTTP GET"],
@@ -62,7 +62,7 @@
 
       "informationDefinition": [
         {
-          "name": "WinterWeatherIndex",
+          "name": "WinterWXindex1",
           "description": "Index which describes intensity of winter weather for aircrafts which have de-icing systems.",
           "airmConformant": true,
           "airmVersion": "4.1.0"
@@ -86,12 +86,12 @@
       "operationalNeed": [
         {
           "name": "Operational context",
-          "description": "Winter Weather Index for Aircrafts with the de‐icing systems service fills the need to retrieve information about weather phenomena for flight planning and total airport management. No IER was used"
+          "description": "WinterWXindex1/point service fills the need to retrieve information about weather phenomena for flight planning and total airport management. No IER was used"
         }
       ],
       "functionality": [
         {
-          "name": "Download Winter Weather Index for Aircrafts with the de‐icing systems to a Point",
+          "name": "Download WinterWXindex1/point",
           "description": "Allow the service consumer to retrieve Winter Weather Index for Aircrafts with the de‐icing systems forecast information in the European domaine to any desired point as time serie format",
           "realWorldEffect": ""
         }
@@ -145,7 +145,7 @@
           "documentType": "INFORMATION_DEFINITION",
           "title": "Product Description Document",
           "version": "1.0",
-          "description": "This document is intended to serve as quick overview of the product and some guidelines to be able to use Winter Weather Index for Aircrafts with the de‐icing systems forecast in aeronautical context.",
+          "description": "This document is intended to serve as quick overview of the product and some guidelines to be able to use WinterWXindex1/point forecast in aeronautical context.",
           "reference": "https://github.com/fmidev/swim/wiki/Winter-Weather-Index-for-Aircrafts-with-the-de%E2%80%90icing-systems"
         },
 
@@ -202,14 +202,14 @@
         }
       ],
       "serviceDescriptionIdentification": {
-        "serviceDescriptionTitle": "Winter Weather Index for Aircrafts with the de‐icing systems to a point",
+        "serviceDescriptionTitle": "WinterWXindex1/point",
         "serviceDescriptionEdition": "1.0",
         "serviceDescriptionReferenceDate": "2021-06-15"
       }
     },
-    "name": "Winter Weather Index for Aircrafts with the de‐icing systems to a Point",
+    "name": "WinterWXindex1/point",
     "version": "1.0.0",
-    "serviceAbstract": "Winter Weather Index for Aircrafts with the de‐icing systems to a point -service is a forecast for the potential impact of winter weather conditions on air traffic. Especially related to icing and need for de-icing for aircrafts with the de-icing systems. It is post-processed information from ECMWF input data and it is intended to air traffic planner, airport maintenance, air traffic control, airlines and pilots to help and prepare for Winter weather conditions. The forecast has 3 classes for severity of icing: light, moderate and heavy.",
+    "serviceAbstract": "WinterWXindex1/point -service is a forecast for the potential impact of winter weather conditions on air traffic. Especially related to icing and need for de-icing for aircrafts with the de-icing systems. It is a part of FMI's  Winter Weather service family. It is post-processed information from ECMWF input data and it is intended to air traffic planner, airport maintenance, air traffic control, airlines and pilots to help and prepare for Winter weather conditions. The forecast has 3 classes for severity of icing: light, moderate and heavy.",
     "serviceProvision": {
       "provider": "Finnish Meteorological Institute, FMI",
       "providerDescription": "FMI is the designated aeronautical meteorological service provider for Helsinki FIR as designated by the Ministry of Transport and Communications of Finland and as certified by Finnish Transport and Communications Agency.",
@@ -225,7 +225,7 @@
         },
         {
           "name": "service support",
-          "description": "For any issues related to the operation of Winter Weather Index for Aircrafts with the de-icing systems service ",
+          "description": "For any issues related to the operation of WinterWXindex1/point service ",
           "email": "ilmailu@fmi.fi",
           "phoneNumber": ""
         }
