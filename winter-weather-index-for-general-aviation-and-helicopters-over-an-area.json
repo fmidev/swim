@@ -2,7 +2,7 @@
   "informationService": {
     "serviceInterface": [
       {
-        "name": "Winter Weather Index for General Aviation and Helicopters over an area interface",
+        "name": "WinterWXindex2/area interface",
         "description": "The interface for the service is provided as a GRIB2 download service via HTTP and it is described fully in Github: https://github.com/fmidev/smartmet-plugin-download/wiki/SmartMet-plugin-download",
         "interfaceProvisionSide": "PROVIDER_SIDE_INTERFACE",
         "tiPrimitiveMessageExchangePattern": "SYNCHRONOUS_REQUEST_RESPONSE",
@@ -18,7 +18,7 @@
         ],
         "operation": [
           {
-            "name": "Winter Weather Index for General Aviation and Helicopters over an area",
+            "name": "WinterWXindex2/area",
             "description": "The interface for the service is provided as a GRIB download service via HTTP. Message exchange pattern is request-response type. Typically the user makes a request to the server and in response gets a GRIB file.",
             "synchronicity": "SYNCHRONOUS",
             "tiProtocolMethod": ["HTTP GET"],
@@ -86,13 +86,13 @@
       "operationalNeed": [
         {
           "name": "Operational context",
-          "description": "Winter Weather Index for General Aviation and Helicopters service fills the need to retrieve information about weather phenomena for flight planning and total airport management. No IER was used "
+          "description": "WinterWXindex2/area service fills the need to retrieve information about weather phenomena for flight planning and total airport management. No IER was used "
         }
       ],
       "functionality": [
         {
-          "name": "Download Winter Weather Index for General Aviation and Helicopters over an area",
-          "description": "Allow the service consumer to retrieve Winter Weather Index for General Aviation and Helicopters forecast information in the European domaine in GRIB2 format",
+          "name": "Download WinterWXindex2/area",
+          "description": "Allow the service consumer to retrieve WinterWXindex2/area forecast information in the European domaine in GRIB2 format",
           "realWorldEffect": ""
         }
       ],
@@ -145,7 +145,7 @@
           "documentType": "INFORMATION_DEFINITION",
           "title": "Product Description Document",
           "version": "1.0",
-          "description": "This document is intended to serve as quick overview of the product and some guidelines to be able to use Winter Weather Index for General Aviation and Helicopters forecast in aeronautical context.",
+          "description": "This document is intended to serve as quick overview of the product and some guidelines to be able to use WinterWXindex2/area forecast in aeronautical context.",
           "reference": "https://github.com/fmidev/swim/wiki/Winter-Weather-Index-for-General-Aviation-and-Helicopters"
         },
 
@@ -207,9 +207,9 @@
         "serviceDescriptionReferenceDate": "2021-06-15"
       }
     },
-    "name": "Winter Weather Index for General Aviation and Helicopters over an area",
+    "name": "WinterWXindex2/area",
     "version": "1.0.0",
-    "serviceAbstract": "Winter Weather Index for General Aviation and Helicopters over an area -service is a forecast for the potential impact of winter weather conditions on air traffic. Especially related to icing and need for de-icing for general aviation and helicopters. It is post-processed information from ECMWF input data and it is intended to air traffic planner, airport maintenance, air traffic control, airlines and pilots to help and prepare for Winter weather conditions. The forecast has 3 classes for severity of icing: light, moderate and heavy.",
+    "serviceAbstract": "WinterWXindex2/area -service is a forecast for the potential impact of winter weather conditions on air traffic. Especially related to icing and need for de-icing for general aviation and helicopters. It is a part of FMI's  Winter Weather service family. It is post-processed information from ECMWF input data and it is intended to air traffic planner, airport maintenance, air traffic control, airlines and pilots to help and prepare for Winter weather conditions. The forecast has 3 classes for severity of icing: light, moderate and heavy.",
     "serviceProvision": {
       "provider": "Finnish Meteorological Institute, FMI",
       "providerDescription": "FMI is the designated aeronautical meteorological service provider for Helsinki FIR as designated by the Ministry of Transport and Communications of Finland and as certified by Finnish Transport and Communications Agency.",
@@ -225,7 +225,7 @@
         },
         {
           "name": "service support",
-          "description": "For any issues related to the operation of Winter Weather Index for General Aviation and Helicopters service ",
+          "description": "For any issues related to the operation of WinterWXindex2/area service ",
           "email": "ilmailu@fmi.fi",
           "phoneNumber": ""
         }
