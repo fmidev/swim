@@ -2,7 +2,7 @@
   "informationService": {
     "serviceInterface": [
       {
-        "name": "WinterWeather Nowcast for Aircraft De-Icing Needs to a Point interface",
+        "name": "De-Icing Need - Point interface",
         "description": "The interface for the service is provide via HTTP API and it is described fully in Github: https://github.com/fmidev/smartmet-plugin-timeseries/wiki/Using-the-Timeseries-API",
         "interfaceProvisionSide": "PROVIDER_SIDE_INTERFACE",
         "tiPrimitiveMessageExchangePattern": "SYNCHRONOUS_REQUEST_RESPONSE",
@@ -91,7 +91,7 @@
       ],
       "functionality": [
         {
-          "name": "Download Winter Weather Nowcast for Aircraft De-Icing Needs to a Point",
+          "name": "Download De-Icing Needs - Point",
           "description": "Allow the service consumer to retrieve nowcast for aircraft de-icing need information in the European domaine to any desired point as time serie format",
           "realWorldEffect": "NIL"
         }
@@ -202,14 +202,14 @@
         }
       ],
       "serviceDescriptionIdentification": {
-        "serviceDescriptionTitle": "Winter Weather Nowcast for Aircraft De-Icing Needs to a Point",
+        "serviceDescriptionTitle": "De-Icing Need - Point",
         "serviceDescriptionEdition": "1.0",
         "serviceDescriptionReferenceDate": "2021-06-15"
       }
     },
-    "name": "Winter Weather Nowcast for Aircraft De-Icing Needs to a Point",
+    "name": "De-Icing Need - Point",
     "version": "1.0.0",
-    "serviceAbstract": "Winter Weather Nowcast for Aircraft De-Icing Needs to a Point -service is a nowcast-type forecast of aircraft de-icing need before takeoff. It is post-processed information from ECMWF data and European radar network (OPERA) information. It is intended to air traffic planner, airport maintenance, air traffic control, airlines and pilots to help and prepare for actions in Winter weather conditions.",
+    "serviceAbstract": "De-Icing Need - Point -service is a nowcast-type forecast of aircraft de-icing need before takeoff. It is a part of FMI's  Winter Weather service family. It is post-processed information from ECMWF data and European radar network (OPERA) information. It is intended to air traffic planner, airport maintenance, air traffic control, airlines and pilots to help and prepare for actions in Winter weather conditions.",
     "serviceProvision": {
       "provider": "Finnish Meteorological Institute, FMI",
       "providerDescription": "FMI is the designated aeronautical meteorological service provider for Helsinki FIR as designated by the Ministry of Transport and Communications of Finland and as certified by Finnish Transport and Communications Agency.",
@@ -225,7 +225,7 @@
         },
         {
           "name": "service support",
-          "description": "For any issues related to the operation of Winter Weather Nowcast for Aircraft De-Icing Needs service ",
+          "description": "For any issues related to the operation of De-Icing Need - point service ",
           "email": "ilmailu@fmi.fi",
           "phoneNumber": "NIL"
         }
